@@ -15,7 +15,7 @@ const frank = Frank_Ruhl_Libre({
 });
 
 export const metadata: Metadata = {
-  title: "Ierushalaim Jeopardy",
+  title: "Ierushalaim",
   description: "Trivia vivencial sobre Jerusalén",
 };
 

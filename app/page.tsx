@@ -96,7 +96,7 @@ export default function Home() {
               ירושלים
             </p>
             <h1 className="font-[family-name:var(--font-cinzel)] text-3xl sm:text-4xl font-black tracking-wider text-[#f5e9d4]">
-              IERUSHALAIM JEOPARDY
+              IERUSHALAIM
             </h1>
           </div>
           <p className="font-[family-name:var(--font-cinzel)] text-xs sm:text-sm tracking-[0.3em] text-[#a89070]">
@@ -164,7 +164,7 @@ export default function Home() {
                             ? "Opción múltiple"
                             : p.tipo === "abierta"
                             ? "Abierta"
-                            : "Tabú"}
+                            : "A describir"}
                         </span>
                       )}
                     </button>
@@ -216,7 +216,7 @@ export default function Home() {
                 ? "Opción múltiple"
                 : preguntaActiva.tipo === "abierta"
                 ? "Pregunta abierta"
-                : "Desafío Tabú"}
+                : "A describir"}
             </span>
           </div>
 
