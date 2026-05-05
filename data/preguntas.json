@@ -1,0 +1,100 @@
+{
+  "categorias": [
+    {
+      "nombre": "Historia y Símbolos",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "tipo": "multiple",
+          "pregunta": "¿Qué rey estableció a Jerusalén como la capital del Reino de Israel hace aproximadamente 3.000 años?",
+          "opciones": ["Herodes", "David", "Salomón"],
+          "correcta": 1
+        },
+        {
+          "puntos": 200,
+          "tipo": "abierta",
+          "pregunta": "¿Qué evento trascendental para el pueblo judío ocurrió en el año 70 d.C. a manos de los romanos?",
+          "respuesta": "La destrucción del Segundo Templo."
+        },
+        {
+          "puntos": 300,
+          "tipo": "tabu",
+          "palabra": "EL LEÓN DE JUDÁ",
+          "prohibidas": ["Escudo", "Animal", "Jerusalén", "Símbolo"]
+        }
+      ]
+    },
+    {
+      "nombre": "Geografía y Paisaje",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "tipo": "multiple",
+          "pregunta": "¿Sobre qué cadena montañosa se encuentra ubicada la ciudad de Jerusalén?",
+          "opciones": ["Montes de Galilea", "Montes de Judea", "Monte Carmelo"],
+          "correcta": 1
+        },
+        {
+          "puntos": 200,
+          "tipo": "abierta",
+          "pregunta": "Por su ubicación geográfica, ¿hacia qué región desciende el terreno si viajamos pocos kilómetros hacia el este de la ciudad?",
+          "respuesta": "Hacia el Desierto de Judea (o el Mar Muerto)."
+        },
+        {
+          "puntos": 300,
+          "tipo": "tabu",
+          "palabra": "PIEDRA DE JERUSALÉN",
+          "prohibidas": ["Construcción", "Oro", "Blanca", "Edificio", "Material"]
+        }
+      ]
+    },
+    {
+      "nombre": "Tradiciones y Vida Diaria",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "tipo": "multiple",
+          "pregunta": "¿Qué sucede con el comercio y el transporte público en Jerusalén el viernes por la tarde?",
+          "opciones": ["Empiezan las ofertas", "Se detienen por el inicio de Shabat", "Se duplica la frecuencia"],
+          "correcta": 1
+        },
+        {
+          "puntos": 200,
+          "tipo": "abierta",
+          "pregunta": "¿Cómo se llama el famoso mercado (shuk) que es el corazón de la vida cotidiana y nocturna de la ciudad?",
+          "respuesta": "Machane Yehuda."
+        },
+        {
+          "puntos": 300,
+          "tipo": "tabu",
+          "palabra": "EL KOTEL (Muro de los Lamentos)",
+          "prohibidas": ["Rezar", "Notas / Papelitos", "Templo", "Piedras", "Sagrado"]
+        }
+      ]
+    },
+    {
+      "nombre": "La Ciudad Vieja",
+      "preguntas": [
+        {
+          "puntos": 100,
+          "tipo": "multiple",
+          "pregunta": "¿En cuántos barrios está dividida internamente la Ciudad Vieja dentro de sus murallas?",
+          "opciones": ["3 barrios", "4 barrios", "2 barrios"],
+          "correcta": 1
+        },
+        {
+          "puntos": 200,
+          "tipo": "abierta",
+          "pregunta": "¿Qué imperio construyó las murallas actuales que rodean la Ciudad Vieja en el siglo XVI?",
+          "respuesta": "El Imperio Otomano (Sultán Solimán el Magnífico)."
+        },
+        {
+          "puntos": 300,
+          "tipo": "tabu",
+          "palabra": "CIUDAD VIEJA",
+          "prohibidas": ["Muralla", "Barrios", "Antigua", "Puertas", "Centro"]
+        }
+      ]
+    }
+  ]
+}
