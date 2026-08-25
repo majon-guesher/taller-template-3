@@ -1,0 +1,157 @@
+[
+  {
+    "title": "IA 101",
+    "accent": "lime",
+    "questions": [
+      {
+        "value": 100,
+        "clue": "Es la forma de IA que aprende patrones mirando muchos ejemplos.",
+        "answer": "¿Qué es el aprendizaje automático o machine learning?"
+      },
+      {
+        "value": 200,
+        "clue": "Texto, imagen, audio y video: son cuatro cosas que una IA generativa puede crear.",
+        "answer": "¿Qué son tipos de contenido generativo?"
+      },
+      {
+        "value": 300,
+        "clue": "Cuando una IA inventa un dato falso pero lo dice con total seguridad, pasa esto.",
+        "answer": "¿Qué es una alucinación?"
+      },
+      {
+        "value": 400,
+        "clue": "Es el proceso largo en el que un modelo aprende; usar lo aprendido después se llama inferencia.",
+        "answer": "¿Qué es el entrenamiento?"
+      },
+      {
+        "value": 500,
+        "clue": "Este matemático propuso en 1950 un juego para pensar si una máquina podía parecer inteligente.",
+        "answer": "¿Quién fue Alan Turing?"
+      }
+    ]
+  },
+  {
+    "title": "Prompt o nada",
+    "accent": "pink",
+    "questions": [
+      {
+        "value": 100,
+        "clue": "Cuanto más claro es esto sobre lo que querés lograr, mejor suele ser la respuesta.",
+        "answer": "¿Qué es el objetivo?"
+      },
+      {
+        "value": 200,
+        "clue": "“En menos de 80 palabras” es un ejemplo de esta parte del pedido.",
+        "answer": "¿Qué es una restricción?"
+      },
+      {
+        "value": 300,
+        "clue": "Pedir “dame tres opciones” sirve para abrir esto antes de elegir.",
+        "answer": "¿Qué es el abanico de posibilidades?"
+      },
+      {
+        "value": 400,
+        "clue": "Mostrarle a la IA dos resultados como referencia usa esta técnica.",
+        "answer": "¿Qué es dar ejemplos o few-shot prompting?"
+      },
+      {
+        "value": 500,
+        "clue": "Pedir, mirar, corregir y volver a pedir: este ciclo supera al “prompt perfecto”.",
+        "answer": "¿Qué es iterar?"
+      }
+    ]
+  },
+  {
+    "title": "Mitos que caen",
+    "accent": "orange",
+    "questions": [
+      {
+        "value": 100,
+        "clue": "Verdadero o falso: una IA siempre sabe si su respuesta es correcta.",
+        "answer": "¿Qué es falso? Hay que verificar."
+      },
+      {
+        "value": 200,
+        "clue": "Verdadero o falso: todos los modelos conocen lo que pasó hoy.",
+        "answer": "¿Qué es falso? No todos tienen acceso a información en vivo."
+      },
+      {
+        "value": 300,
+        "clue": "La IA puede repetir estos problemas presentes en los datos con los que aprendió.",
+        "answer": "¿Qué son los sesgos?"
+      },
+      {
+        "value": 400,
+        "clue": "La fluidez de una respuesta no garantiza esta cualidad.",
+        "answer": "¿Qué es la veracidad?"
+      },
+      {
+        "value": 500,
+        "clue": "Una IA no reemplaza esta responsabilidad humana al decidir qué publicar o usar.",
+        "answer": "¿Qué es el criterio?"
+      }
+    ]
+  },
+  {
+    "title": "Viaje en el tiempo",
+    "accent": "blue",
+    "questions": [
+      {
+        "value": 100,
+        "clue": "En esta década empezó a usarse el término “inteligencia artificial”.",
+        "answer": "¿Qué son los años 50?"
+      },
+      {
+        "value": 200,
+        "clue": "Este programa de 1966 imitaba a una terapeuta conversando por texto.",
+        "answer": "¿Qué es ELIZA?"
+      },
+      {
+        "value": 300,
+        "clue": "En 1997, Deep Blue venció a Garry Kasparov jugando este juego.",
+        "answer": "¿Qué es el ajedrez?"
+      },
+      {
+        "value": 400,
+        "clue": "En noviembre de este año se lanzó ChatGPT al público.",
+        "answer": "¿Qué es 2022?"
+      },
+      {
+        "value": 500,
+        "clue": "Este encuentro de 1956 en Estados Unidos es señalado como el nacimiento formal del campo.",
+        "answer": "¿Qué fue el taller de Dartmouth?"
+      }
+    ]
+  },
+  {
+    "title": "Modo taller",
+    "accent": "violet",
+    "questions": [
+      {
+        "value": 100,
+        "clue": "Es mejor construir una versión pequeña hoy que imaginar durante meses esta versión imposible.",
+        "answer": "¿Qué es la versión perfecta?"
+      },
+      {
+        "value": 200,
+        "clue": "La persona concreta para la que diseñás debería aparecer antes que la lista de funciones.",
+        "answer": "¿Quién es el usuario?"
+      },
+      {
+        "value": 300,
+        "clue": "Mirar cómo alguien usa tu idea te da algo más valioso que adivinar.",
+        "answer": "¿Qué es feedback real?"
+      },
+      {
+        "value": 400,
+        "clue": "Una primera versión útil, chica y lista para probar se conoce por estas tres letras.",
+        "answer": "¿Qué es un MVP?"
+      },
+      {
+        "value": 500,
+        "clue": "La pregunta que ordena todo un proyecto: “¿qué tiene que pasar para que esto...?”",
+        "answer": "¿Qué es funcionar?"
+      }
+    ]
+  }
+]
