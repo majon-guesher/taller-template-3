@@ -14,8 +14,8 @@ const bungee = Bungee({
 });
 
 export const metadata: Metadata = {
-  title: "Jeopardy IA — Majón",
-  description: "El tablero de preguntas del taller de inteligencia artificial de Majón.",
+  title: "Ierushalaim 3000 — Majón",
+  description: "Jeopardy de historia, cultura, tradiciones y geografía de Ierushalaim.",
 };
 
 export default function RootLayout({
