@@ -188,7 +188,7 @@ export function JeopardyGame({ categories }: { categories: Category[] }) {
       </div>
 
       <Dialog open={selected !== null} onOpenChange={(open) => !open && closeQuestion()}>
-        <DialogContent showCloseButton={false} className="max-h-[96vh] min-h-[86vh] w-[calc(100%-1rem)] max-w-[min(96vw,90rem)] grid-rows-[auto_1fr_auto] gap-0 overflow-y-auto rounded-none border-2 border-[#121212] bg-[#f7f2e8] p-0 text-[#121212] ring-0 sm:w-[96vw]">
+        <DialogContent showCloseButton={false} className="max-h-[96vh] min-h-[86vh] w-[96vw] max-w-[96vw] grid-rows-[auto_1fr_auto] gap-0 overflow-y-auto rounded-none border-2 border-[#121212] bg-[#f7f2e8] p-0 text-[#121212] ring-0 sm:max-w-[96vw] 2xl:max-w-[90rem]">
           {selected && (
             <>
               <div className="flex items-center justify-between border-b-2 border-[#121212] bg-[#dfff3f] px-4 py-3 sm:px-7 sm:py-4">
