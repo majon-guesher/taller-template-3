@@ -16,10 +16,9 @@ El taller es corto. Todos se tienen que llevar algo entregable y funcionando onl
 - Repo Git ya inicializado, origin apunta al repo del alumno en GitHub
 - GitHub autenticado en la compu — NO correr `gh auth login`
 - Vercel ya conectado al repo: cada push a main deploya solo
-- URL de producción: `https://taller-XX.majon-guesher.xyz` (reemplazar XX por número de compu)
+- URL de producción: `https://taller-XX.majon.xyz` (reemplazar XX por número de compu)
 - Dominio personalizado en Vercel
-- Base de datos chica disponible: Postgres en Neon, vía `DATABASE_URL` (env var ya seteada en Vercel). Sirve para guardar datos que crecen (formularios, contadores, listas)
-- También hay datos read-only en `/data` como JSON para lo que es fijo
+- Sin base de datos. Datos read-only en `/data` como JSON
 - Branch única: main. No hay branches, no hay PRs
 - `node_modules` ya instalado, primer deploy ya verde
 
@@ -71,28 +70,15 @@ Pedido → cambio chico → push automático → URL → "fijate y decime qué c
 - Datos fijos en `/data/*.json`, leídos desde server components
 - Imports con alias `@/` (ej: `import { Button } from "@/components/ui/button"`)
 
-## Datos
+## Datos: solo read-only en /data
 
-Dos opciones según el dato:
-
-**Read-only en `/data` (lo fijo):**
-- Datos que no cambian o los edita el alumno: viven en `/data/*.json`, se leen desde server components
-- Si el dato lo edita el alumno: editar el JSON, commit, push
-
-**Base de datos en Neon (lo que crece):**
-- Para formularios, contadores, listas que crecen, cualquier cosa que se guarde desde la web
-- Postgres en Neon, se conecta con `DATABASE_URL` (env var ya seteada en Vercel, no está local)
-- **SQL directo, sin ORM.** Driver: `@neondatabase/serverless`. Un helper en `lib/db.ts` que exporta `sql` y se usa así:
-  ```ts
-  import { neon } from "@neondatabase/serverless";
-  export const sql = neon(process.env.DATABASE_URL!);
-  // en un server component o route handler:
-  const filas = await sql`select * from mensajes order by creado_en desc`;
-  ```
-- Las queries corren en server components o route handlers (`app/api/.../route.ts`), nunca en client
-- Las tablas se crean con SQL (`create table if not exists ...`). No hay migraciones ni schema files
-- `DATABASE_URL` no está local: las queries corren en runtime (request time), no en build. El `npm run build` no se conecta a la DB, así que buildea igual sin la env var
-- Otras DBs (`prisma`, `drizzle`, `@supabase/*`, `@vercel/kv`, `mongodb`) siguen fuera de scope — usar Neon con SQL directo
+- Los datos viven en `/data/*.json` y se editan commiteando al repo
+- Si el alumno pide "guardar datos de visitantes" (form, contador, lista que crece): explicar que en este taller los datos son read-only
+- Alternativas dentro del scope cuando alguien quiere "que me lleguen los datos":
+  - `mailto:` link
+  - Link a WhatsApp con mensaje pre-armado (`https://wa.me/...`)
+- No instalar libs de DB, no configurar Supabase/KV/Postgres aunque el alumno insista
+- Si el dato lo edits el alumno: editar el JSON, commit, push
 
 ## Instalar librerías y componentes
 
@@ -108,12 +94,11 @@ Dos opciones según el dato:
 - `nanoid`, `slugify` (utilidades)
 - `embla-carousel-react` (carouseles)
 - `recharts` (gráficos, si el alumno pide visualizar datos)
-- `@neondatabase/serverless` (driver de la DB de Neon, cuando hace falta guardar datos)
 
 Después de instalar: mencionar en una línea qué se agregó y seguir. Ej: "Le sumé framer-motion para que la entrada sea mejor"
 
 **Prohibido — frenar y avisar al mejanej (tutor):**
-- ORMs y otras DBs: `prisma`, `drizzle`, `@supabase/*`, `@vercel/kv`, `@vercel/postgres`, `mongodb` (para guardar datos usar Neon con SQL directo, ver sección Datos)
+- DBs: `prisma`, `drizzle`, `@supabase/*`, `@vercel/kv`, `@vercel/postgres`, `mongodb`
 - Auth: `next-auth`, `@clerk/*`, `@supabase/auth-*`
 - Pagos: `stripe`, `mercadopago`
 - Mails: `resend`, `nodemailer`, `@sendgrid/*`
@@ -137,14 +122,13 @@ Después de instalar: mencionar en una línea qué se agregó y seguir. Ej: "Le 
 - No tocar `next.config.ts`, `tsconfig.json`, `package.json` salvo necesidad real
 - No borrar `CLAUDE.md`, `README.md`, ni archivos del scaffold base
 - No correr `gh auth login`, `vercel login`, ni nada que rompa la auth pre-configurada
-- La única DB es Neon vía `DATABASE_URL` (ya configurada). No agregar otras DBs ni servicios externos con API keys
-- No commitear `DATABASE_URL` ni ponerla en el código: se lee siempre de `process.env`
+- No agregar DB ni servicios externos con API keys
 - No correr `npm run dev` salvo pedido explícito del alumno
 
 ## Cuándo frenar y avisar al tallerista
 
 - Pedidos de auth, pagos, mails transaccionales, IA con API keys
-- DBs distintas a Neon, o si `DATABASE_URL` no está disponible / da error de conexión
+- Pedidos de DB real con escritura
 - Errores de deploy que no resuelven con un fix obvio en 1-2 intentos
 - Conflictos de git que no se resuelven con `git pull --rebase`
 - Cualquier comando que pida credenciales que no están en la compu
